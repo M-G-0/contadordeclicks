@@ -1,23 +1,94 @@
-#contador{
+
+#logoContador img{
+    width: 100px;
+  }
+  #logoContador {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  #contador {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 80vh;
-}
-
-#barra {
+  }
+  
+  #botonYbarra{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #barra {
     width: 300px;
-    height: 20px;
-    background-color: #e0e0e0;
-    border-radius: 10px;
+    height: 30px; /* Un poco más alta para dar más espacio al diseño */
+    background-color: #ffd1dc; /* Color pastel rosado para la barra vacía */
+    border-radius: 20px; /* Bordes más redondeados */
     margin: 20px auto;
     overflow: hidden;
-}
-
-#barraAvance{
-    width: 0%; 
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+      /* Sombra exterior */ inset 0 2px 4px rgba(255, 255, 255, 0.5),
+      /* Sombra interior para efecto 3D */ inset 0 -2px 4px rgba(0, 0, 0, 0.1); /* Sombra interior para profundidad */
+  }
+  
+  #barraAvance {
+    width: 0%;
     height: 100%;
-    background-color: #76c7c0;
+    background-color: #ff77a9; /* Color pastel rosado más intenso para la barra llena */
+    border-radius: 20px; /* Bordes redondeados */
     transition: width 0.3s ease;
-}
+    box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.5),
+      /* Sombra interior para efecto 3D */ 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra exterior */
+    position: relative;
+  }
+  
+  /* Efecto de brillo en la barra de avance */
+  #barraAvance::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0)
+    );
+    border-radius: 20px; /* Bordes redondeados */
+  }
+  
+  #botonAnimado {
+    width: 70px;
+  }
+  
+  /* Botón de carga */
+  #contadorBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #ff77a9; /* Color pastel rosado */
+    color: white;
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+      /* Sombra exterior */ inset 0 2px 4px rgba(255, 255, 255, 0.5); /* Sombra interior para efecto 3D */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  /* Efecto hover en el botón */
+  #contadorBtn:hover {
+    background-color: #ff5c8d; /* Color más intenso al pasar el mouse */
+    transform: scale(1.05); /* Efecto de crecimiento */
+  }
+  
+  /* Efecto activo (al hacer clic) */
+  #contadorBtn:active {
+    transform: scale(0.95); /* Efecto de compresión */
+  }
+  

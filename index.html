@@ -1,24 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contador de clicks</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-   <div id="contador">
-    
-    <h1>Contador</h1>
-    <h3 id="marcador" >Llevas 0 clicks. </h3>
-    <div id="barra">
-        <div id="barraAvance"></div>
-    </div>
-    <button id="contadorBtn">Click aquí</button>
-    
-    </div>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="contador">
+      <div id="logoContador"><img src="images/logoContador.png" alt="" /></div>
+      <div id="insigniaContainer">
+        <img id="insignia" src="images/insignia0.png" alt="Insignia" />
+        <p id="siguienteMetaTexto">Siguiente meta: 10</p>
+      </div>
+      <h3 id="marcador">Llevas 0 clicks.</h3>
 
+      <div class="botonito">
+        <img id="botonAnimado" src="images/botonLike1.png" alt="Estado 1" />
+      </div>
+
+      <div id="botonYbarra">
+        <div id="barra">
+          <div id="barraAvance"></div>
+        </div>
+        <div>
+          <button id="contadorBtn">Dar Like ❤️</button>
+        </div>
+      </div>
+    </div>
 
     <script src="./main.js"></script>
-</body>
+  </body>
 </html>
